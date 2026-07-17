@@ -83,6 +83,31 @@
     opacity: 0; 
     transition: opacity 0.4s ease;
   }
+
+  /* ---------- SINGLE FEATURED IMAGE (OPTIMIZED FOR 1152x921) ---------- */
+  .single-image-wrapper {
+    max-width: 450px;
+    width: 100%;
+    /* පින්තූරයේ සැබෑ හැඩයටම (1152:921) Frame එක auto adjust වෙන්න මෙන්න මේ ratio එක දාන්න */
+    aspect-ratio: 1152 / 921; 
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+    border: 3px solid rgba(255, 255, 255, 0.5); /* Premium Glass Border */
+    background: rgba(255, 255, 255, 0.1); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .single-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover; /* පින්තූරය ඇද නොවී frame එකට ලස්සනට fit කරයි */
+  }
   
   /* Show video at full opacity when active so the background image won't bleed through */
   #envelope.video-active video {
@@ -543,18 +568,14 @@
     </div>
   </section>
 
-  <!-- GALLERY SECTION -->
+ <!-- GALLERY SECTION -->
   <section id="gallery">
-    <div class="eyebrow">REELS FROM OUR STORY</div>
-    <h2 class="section-title">Captured Moments</h2>
+    <div class="eyebrow">A GLIMPSE OF OUR STORY</div>
+    <h2 class="section-title">Captured Moment</h2>
     
-    <div class="gallery-grid">
-      <div class="gallery-item tall"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&amp;w=600&amp;auto=format&amp;fit=crop" alt="Gallery 1"></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&amp;w=600&amp;auto=format&amp;fit=crop" alt="Gallery 2"></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&amp;w=600&amp;auto=format&amp;fit=crop" alt="Gallery 3"></div>
-      <div class="gallery-item tall"><img src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?q=80&amp;w=600&amp;auto=format&amp;fit=crop" alt="Gallery 4"></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?q=80&amp;w=600&amp;auto=format&amp;fit=crop" alt="Gallery 5"></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1519225495810-7512c696505a?q=80&amp;w=600&amp;auto=format&amp;fit=crop" alt="Gallery 6"></div>
+    <div class="single-image-wrapper">
+      <!-- ඔයාගේ ලඟ තියෙන පින්තූරයේ නම (e.g., photo.jpg) src එකට ලබාදෙන්න -->
+      <img src="img.png" alt="Featured Moment">
     </div>
   </section>
 
