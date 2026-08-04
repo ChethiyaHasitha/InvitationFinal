@@ -476,7 +476,12 @@
 
   <!-- ENVELOPE / TAP TO ENTER -->
   <div id="envelope">
-    <video id="envelope-video" src="envelope-open.mp4" playsinline preload="auto" muted></video>
+    <video id="envelope-video"
+       src="envelope-open.mp4"
+       playsinline
+       preload="metadata"
+       muted>
+    </video>
     <div class="env-content" id="env-text-content">
       <div class="env-eyebrow">An Invitation</div>
       <div class="env-names">Chethiya & Thilanka</div>
@@ -485,7 +490,8 @@
     </div>
   </div>
 
-  <audio id="bg-music" src="music.mp3" loop></audio>
+  <!-- <audio id="bg-music" src="music.mp3" loop></audio> -->
+  <audio id="bg-music" src="music.mp3" preload="none" loop></audio>
   <div id="sound-toggle" title="Toggle music">♪</div>
 
   <!-- HERO SECTION -->
@@ -589,7 +595,10 @@
     
     <div class="single-image-wrapper">
       <!-- ඔයාගේ ලඟ තියෙන පින්තූරයේ නම (e.g., photo.jpg) src එකට ලබාදෙන්න -->
-      <img src="img.png" alt="Featured Moment">
+      <!-- <img src="img.png" alt="Featured Moment"> -->
+      <img src="img.png"
+     loading="lazy"
+     alt="Featured Moment">
     </div>
   </section>
 
